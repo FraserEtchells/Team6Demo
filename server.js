@@ -9,6 +9,9 @@ var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
 const port = 4000;
+if (process.env.PORT !== undefined){
+    port = process.env.PORT;
+}
 
 app.use(express.static('./build/'));
 app.get('/', (req, res) => {
