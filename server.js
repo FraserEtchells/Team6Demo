@@ -8,10 +8,7 @@ var app = require('express')();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
-const port = 4000;
-if (process.env.PORT !== undefined){
-    port = process.env.PORT;
-}
+const port = process.env.PORT || 4000;
 
 app.use(express.static('./build/'));
 app.get('/', (req, res) => {
