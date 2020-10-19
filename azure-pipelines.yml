@@ -20,10 +20,8 @@ steps:
     displayName: "Install Node.js"
 
   - script: |
-      pushd $(uiSource)
       npm install
       npm run build
-      popd
     displayName: "Build UI"
 
   - task: ArchiveFiles@2
