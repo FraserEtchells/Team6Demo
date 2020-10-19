@@ -15,7 +15,7 @@ if (process.env.PORT !== undefined){
 
 app.use(express.static('./build/'));
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/build/index.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
 var Lobbies={};
