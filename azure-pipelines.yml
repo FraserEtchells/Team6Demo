@@ -7,8 +7,8 @@ trigger:
   - master
 
 variables:
-  uiSource: "src"
-  uiBuild: "$(uiSource)/build"
+  uiSource: " "
+  uiBuild: "build"
 
 pool:
   vmthumbnail: ../"ubuntu-latest"
