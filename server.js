@@ -14,7 +14,7 @@ const port = process.env.PORT;
 
 
 
-
+const cors = require('cors');
 const path = require('path');
 const http = require('http');
 const express = require('express');
@@ -27,6 +27,7 @@ const io = socketio(server);
 
 io.set('origins', '*:*');
 
+app.use(cors());
 // Set static folder
 app.use(express.static(path.join(__dirname, 'build')));
 
