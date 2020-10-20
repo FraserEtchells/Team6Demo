@@ -10,9 +10,8 @@
 //   res.sendFile(__dirname + '/index.html');
 // });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT;
 
-const cors = require('cors');
 
 
 
@@ -25,6 +24,8 @@ const socketio = require('socket.io');
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+
+io.set('origins', '*:*');
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'build')));
