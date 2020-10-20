@@ -10,9 +10,9 @@ var io = require('socket.io')(http);
 
 const port = process.env.PORT || 4000;
 
-app.use(express.static('./build/'));
+app.use(express.static(path.join(__dirname, '/build/')));
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/build/index.html');
+  res.sendFile(path.join(__dirname + '/build/index.html'));
 });
 
 var Lobbies={};
