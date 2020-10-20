@@ -10,7 +10,7 @@
 //   res.sendFile(__dirname + '/index.html');
 // });
 
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 
 
 
@@ -30,7 +30,6 @@ io.set('origins', '*:*');
 // Set static folder
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.use(cors());
 
 
 

@@ -6,7 +6,7 @@ import { createGlobalStyle } from 'styled-components'
 import openSocket from "socket.io-client";
 import PassionOne from '../fonts/PassionOne.ttf';
 
-const socket = openSocket('https://demoteam6.azurewebsites.net');
+const socket = openSocket('https://demoteam6.azurewebsites.net:443');
 
 const GlobalStyle = createGlobalStyle`
  @font-face {
