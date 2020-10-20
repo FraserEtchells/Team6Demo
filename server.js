@@ -12,6 +12,8 @@
 
 const port = process.env.PORT || 4000;
 
+const cors = require('cors');
+
 
 
 const path = require('path');
@@ -27,8 +29,7 @@ const io = socketio(server);
 // Set static folder
 app.use(express.static(path.join(__dirname, 'build')));
 
-
-// Set static folder
+app.use(cors());
 
 
 
