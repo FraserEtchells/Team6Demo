@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 import openSocket from "socket.io-client";
 
-const socket = openSocket("http://demoteam6.azurewebsites.net:443");
+const socket = openSocket("http://demoteam6.azurewebsites.net");
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
   body {
