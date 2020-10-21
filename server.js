@@ -24,8 +24,6 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-io.set('origins', '*:*');
-
 // Set static folder
 app.use(express.static(path.join(__dirname, 'build')));
 
