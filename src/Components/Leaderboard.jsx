@@ -5,7 +5,7 @@ import { createGlobalStyle } from 'styled-components'
 import io from "socket.io-client";
 
 
-const socket = io.connect();
+const socket = io();
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
   body {
