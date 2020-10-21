@@ -27,6 +27,8 @@ const io = socketio(server);
 // Set static folder
 app.use(express.static(path.join(__dirname, 'build')));
 
+app.use(cors());
+
 
 
 
