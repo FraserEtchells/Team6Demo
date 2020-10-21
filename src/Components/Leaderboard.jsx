@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
-import openSocket from "socket.io-client";
+import io from "socket.io-client";
 
-const socket = openSocket("http://demoteam6.azurewebsites.net:" + process.env.PORT);
+
+const socket = io.connect();
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
   body {

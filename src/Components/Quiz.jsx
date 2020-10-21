@@ -3,10 +3,10 @@ import Leaderboard from "./Leaderboard"
 import ReactDOM from 'react-dom';
 import styled from "styled-components";
 import { createGlobalStyle } from 'styled-components'
-import openSocket from "socket.io-client";
+import io from "socket.io-client";
 import PassionOne from '../fonts/PassionOne.ttf';
 
-const socket = openSocket("http://demoteam6.azurewebsites.net:" + process.env.PORT);
+const socket = io.connect();
 
 const GlobalStyle = createGlobalStyle`
  @font-face {
