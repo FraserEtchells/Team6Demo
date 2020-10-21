@@ -27,8 +27,7 @@ const io = socketio(server);
 io.set('origins', '*:*');
 
 // Set static folder
-app.use(express.static(path.join(__dirname, '/build')));
-
+app.use(express.static(path.join(__dirname, 'build')));
 
 
 
